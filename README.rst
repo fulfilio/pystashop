@@ -1,6 +1,18 @@
 Python API for Prestashop
 =========================
 
+.. image:: https://travis-ci.org/fulfilio/pystashop.svg?branch=develop
+    :target: https://travis-ci.org/fulfilio/pystashop
+
+.. image:: https://pypip.in/download/pystashop/badge.svg
+        :target: https://pypi.python.org/pypi/pystashop/
+
+.. image:: https://pypip.in/version/pystashop/badge.svg
+        :target: https://pypi.python.org/pypi/pystashop/
+
+.. image:: https://pypip.in/status/pystashop/badge.svg
+        :target: https://pypi.python.org/pypi/pystashop
+
 The Python API for prestashop
 
 Running the test against an existing server:
@@ -23,7 +35,7 @@ Connecting to your store::
     >>> from pystashop import PrestaShopWebservice
     >>> from datetime import datetime, timedelta
     >>> client = PrestaShopWebservice(
-    ...     'http://prestashop.openlabs.co.in', 
+    ...     'http://prestashop.fulfil.io', 
     ...     'X76XVCPE71843TIY5CPJVV3NX56Z4MVD')
 
 Getting a list of customers::
@@ -38,7 +50,7 @@ Creating customers::
     >>> new_customer = client.customers.get_schema()
     >>> new_customer.firstname = 'Sharoon'
     >>> new_customer.lastname = 'Thomas'
-    >>> new_customer.email = 'st@openlabs.co.in'
+    >>> new_customer.email = 'st@fulfil.io'
     >>> customer = client.customers.create(new_customer)
     >>> customer.firstname
     'Sharoon'
@@ -47,7 +59,7 @@ Creating customers::
     >>> new_customer2 = client.customers.get_schema()
     >>> new_customer2.firstname = 'Test'
     >>> new_customer2.lastname = 'Customer'
-    >>> new_customer2.email = 'test@openlabs.co.in'
+    >>> new_customer2.email = 'test@fulfil.io'
     >>> customer2 = client.customers.create(new_customer2)
     >>> customers_list = client.customers.get_list(as_ids=True)
     >>> len(customers_list) == customers_count + 2
@@ -65,11 +77,11 @@ Getting a single customer record::
 
 Editing the customer details::
 
-    >>> customer.email = 'info@openlabs.co.in'
+    >>> customer.email = 'info@fulfil.io'
     >>> result = client.customers.update(customer.id, customer)
     >>> updated_data = client.customers.get(customer.id)
     >>> updated_data.email
-    'info@openlabs.co.in'
+    'info@fulfil.io'
 
 
 Choosing fields to display::
