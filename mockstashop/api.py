@@ -109,7 +109,7 @@ class MockstaShopWebservice(PrestaShopWebservice):
             self.url = self.url[:-1]
         self.key = key
         self.debug = debug
-        self.version = '1.5'
+        self.version = '1.6'
 
     @property
     def session(self):
