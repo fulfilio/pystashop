@@ -3,8 +3,6 @@
     setup
 
 
-    :copyright: © 2013 by Openlabs Technologies & Consulting (P) Limited
-    :license: BSD, see LICENSE for more details.
 """
 import os
 from setuptools import setup
@@ -16,7 +14,7 @@ setup(
     version=VERSION,    # noqa
     url='https://github.com/openlabs/pystashop/',
     author='Sharoon Thomas, Openlabs Technologies',
-    author_email='info@openlabs.co.in',
+    author_email='info@fulfil.io',
     description='Prestashop Webservice Python API Client',
     long_description=open('README.rst').read(),
     packages=['pystashop', 'mockstashop'],
