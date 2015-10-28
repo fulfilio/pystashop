@@ -4,4 +4,4 @@
 
 
 """
-VERSION = "0.5dev"
+VERSION = "0.6"
